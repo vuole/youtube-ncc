@@ -1,0 +1,363 @@
+html, .container-fluid {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    /* overflow: auto; */
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li{
+    list-style: none;
+}
+
+i{
+    font-size: 20px;
+    color: #606060;
+}
+
+                                                /* css header */
+#header{
+    /* border: 1px solid #ccc; */
+    position: fixed;
+    z-index: 10000;
+    background-color: #ffffff;
+    height: 56px;
+    width: 100%;
+    display: flex;
+}
+
+#logo{
+    display: flex;    
+}
+
+#logo span{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin: 5px 10px;
+}
+
+#logo span:hover{
+    background-color: #d5d5d5;
+}
+
+#logo i{
+    margin: 11px 12px;
+    cursor: pointer;
+}
+
+#logo a{
+    justify-content: center;
+    background: url(../images/logo.png) no-repeat;
+    width: 91px;
+    height: 20px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 16px 15px;
+}
+
+.search{
+    display: flex;
+    position: relative;
+}
+
+.search input{
+    width: 575px;
+    height: 30px;
+    border: 1px solid #d2d2d2;
+    padding: 2px 6px;
+    border-radius: 2px 0 0 2px;
+    font-size: 16px;
+}
+
+.keyboard-icon{
+    position: absolute;
+    right: 78px;
+    top: 6px;
+}
+
+#search-header span{
+    margin: 4px 18px;
+}
+
+#search-header{
+    margin: auto;
+    display: flex;
+}
+
+.button{
+    display: flex;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 65px;
+    margin-left: -1px;
+}
+
+.button i{
+    margin: auto;
+}
+
+#functions-header{
+    display: flex;
+    /* border: 1px solid #ccc; */
+    width: 250px;
+    height: 30px;
+    margin: auto 0;
+}
+
+#functions-header i{
+    margin: 4px 17px;
+}
+
+#functions-header img{
+    display: inline;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-top: -2px;
+}
+                                                /* css header */
+
+#sidebar{
+    position: fixed;
+    height: 100%;
+}
+
+                                                /* large sidebar */
+#large-sidebar{
+    position: absolute;
+    left: 0px;
+    top: 56px;
+    z-index: 10002;
+    background-color: #ffffff;
+    height: 100%;
+    width: 240px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.menu-first{
+    margin-top: 12px;
+}
+
+#large-sidebar ul{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 11px;
+}
+
+#large-sidebar ul .selected:hover{
+    background-color:#d9d9d9;
+}
+
+ul li:hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+#large-sidebar ul li a i{
+    margin: 12px 24px 12px 22px;
+}
+
+#large-sidebar ul li a{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #030303;
+    text-decoration: none;
+}
+
+.selected{
+    background-color: #e5e5e5;
+    font-weight: bold;
+}
+
+.selected i{
+    color: red;
+}
+
+.menu-second{
+    margin-top: -7px;
+}
+                                                /* large sidebar */
+
+                                                /* small sidebar */
+#small-sidebar{
+    float: left;
+    /* background-color: blue; */
+    width: 72px;
+    height: 100%;
+    margin-top: 56px;
+}
+
+#small-sidebar ul{
+    padding: 10px 0px 10px 0px;
+}
+
+#small-sidebar ul li a{
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #030303;
+    text-decoration: none;
+    /* margin: 10px 10px; */
+}
+
+.selected2 a i{
+    color: red;
+}
+
+.selected2 a p{
+    color: red;
+}
+
+#small-sidebar ul li a i{
+    margin-left: 21.5px;
+}
+
+#small-sidebar ul li a p{
+    margin-left: -12px;
+}
+                                                /* small sidebar */
+
+
+                                                /* css main */
+#main{
+    background: #f9f9f9;
+    width: calc(100% - 240px);
+    height: 100%;
+    float: right;
+    padding: 66px 3%;
+}
+
+#main a{
+    text-decoration: none;
+    color: black;
+}
+
+#main .row .card{
+    padding: 12px 8px;
+    border: 0px;
+}
+
+.card-title{
+    font-size: 14px;
+}
+
+.card-text{
+    font-size: 14px;
+    color: #555;
+    margin-top: -5px;
+}
+
+.chanel-icon{
+    height: 36px;
+    width: 36px;
+}
+
+.card-body{
+    display: flex;
+}
+
+.info-video{
+    margin: -8px 30px;
+}
+
+.chanel-link-icon{
+    margin: -10px -20px;
+}
+
+/* .chanel-link-text{
+    margin-top: -7px;
+} */
+
+.chanel-link-text:hover{
+    color: black;
+    font-weight: 400;
+}
+
+.blur{
+    background-color: #000000;
+    opacity: 0;
+    height: 100%;
+    width: calc(100% - 240px);
+    position: absolute;
+    z-index: 10001;
+    right: -14.5px;
+    display: none;
+}
+                                                /* css main */
+
+                                                /* thanh cuộn CSS */
+#large-sidebar::-webkit-scrollbar {
+    background-color: #cccaca;
+    width: 0px;
+    height: 100px;
+}
+
+#large-sidebar:hover::-webkit-scrollbar {
+    background-color: #cccaca;
+    width: 8px;
+    height: 100px;
+}
+
+#large-sidebar::-webkit-scrollbar-thumb {
+    background: #cccaca;
+    width: 0px;
+    height: 100px;
+}
+
+#large-sidebar:hover::-webkit-scrollbar-thumb {
+    background: #cccaca;
+    width: 8px;
+    height: 100px;
+}
+
+#large-sidebar::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+#large-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #cccaca;
+}
+                                                /* thanh cuộn CSS */
+
+                                                /* responsive */
+
+@media only screen and (max-width: 1200px){
+    .search input{
+        width: 420px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .search input{
+        width: 180px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .search input{
+        width: 78px;
+    }
+
+    .keyboard-icon{
+        top: -27px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .search input{
+        width: 78px;
+    }
+}
+
+
+                                                /* responsive */
