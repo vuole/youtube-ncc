@@ -87,30 +87,25 @@ $(document).ready(function() {
     }
 });
 
-var giffImgs = ["./images/giffvideo1.webp", "./images/giffvideo2.webp", "./images/giffvideo3.webp", "./images/giffvideo4.webp",
-    "./images/giffvideo5.webp", "./images/giffvideo6.webp", "./images/giffvideo7.webp", "./images/giffvideo8.webp",
-    "./images/giffvideo9.webp", "./images/giffvideo10.webp", "./images/giffvideo11.webp", "./images/giffvideo12.webp"
-];
-var imgs = ["./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png",
-    "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png",
-    "./images/video1.png", "./images/video1.png"
-];
-
-function hover_in($this) {
-    console.log($("#test"));
-    $("$this .card-img-top").attr("src", "./images/giffvideo1.webp");
-}
-
-function hover_out($this) {
-    // console.log($this);
-    $(".card-img-top").attr("src", "./images/video1.png")
-}
+// var giffImgs = ["./images/giffvideo1.webp", "./images/giffvideo2.webp", "./images/giffvideo3.webp", "./images/giffvideo4.webp",
+//     "./images/giffvideo5.webp", "./images/giffvideo6.webp", "./images/giffvideo7.webp", "./images/giffvideo8.webp",
+//     "./images/giffvideo9.webp", "./images/giffvideo10.webp", "./images/giffvideo11.webp", "./images/giffvideo12.webp"
+// ];
+// var imgs = ["./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png",
+//     "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png",
+//     "./images/video1.png", "./images/video1.png"
+// ];
 
 $(document).ready(function() {
-    var myElements = $(".card");
-    $(".card").hover(function() {
-        hover_in($(this));
-    }, function() {
-        hover_out($(this));
+    var myElements = $('.card-img-top');
+    $('.card-img-top').each(function(index) {
+        $(this).hover(function() {
+            var giffImg = "./images/giffvideo"+(index+1)+".webp";
+            $(this).attr("src",giffImg);               
+            
+        }, function(){
+            var img = "./images/video"+(index+1)+".png";
+            $(this).attr("src",img);
+        });
     });
 });
