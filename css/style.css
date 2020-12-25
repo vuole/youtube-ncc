@@ -1,5 +1,6 @@
 html,
-.container-fluid {
+body,
+.package {
     height: 100%;
     width: 100%;
 }
@@ -9,6 +10,7 @@ body {
     font-size: 14px;
     height: 100%;
     width: 100%;
+    background: #f9f9f9;
     /* overflow: auto; */
 }
 
@@ -47,7 +49,7 @@ i {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    margin: 5px 10px;
+    margin: 5px 12px;
 }
 
 #logo span:hover {
@@ -66,7 +68,7 @@ i {
     height: 20px;
     background-size: cover;
     cursor: pointer;
-    margin: 16px 15px;
+    margin: 17px 8px;
 }
 
 .search {
@@ -153,7 +155,8 @@ i {
     top: 56px;
     z-index: 10002;
     background-color: #ffffff;
-    height: calc(100% - 56px); /*do top bị kéo xuống 56px = chiều cao header*/
+    height: calc(100% - 56px);
+    /*do top bị kéo xuống 56px = chiều cao header*/
     width: 240px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -188,6 +191,10 @@ ul li:hover {
     text-decoration: none;
 }
 
+.menu-second #arrow-down {
+    margin: 12px 29px 12px 25px;
+}
+
 .selected {
     background-color: #e5e5e5;
     font-weight: bold;
@@ -199,6 +206,47 @@ ul li:hover {
 
 .menu-second {
     margin-top: -7px;
+}
+
+.menu-second img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin: 12px 24px 12px 22px;
+}
+
+.menu-second h5 {
+    font-size: 14px;
+    margin-left: 20px;
+    color: #606060;
+}
+
+.footer div {
+    margin-bottom: 12px;
+    margin-left: 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #606060;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: #606060;
+}
+
+.footer p {
+    margin-bottom: -6px;
+}
+
+.footer .foundation {
+    text-align: center;
+    font-size: 13px;
+    margin-left: 0px;
+    color: #909090;
 }
 
 
@@ -241,7 +289,7 @@ ul li:hover {
 }
 
 #small-sidebar ul li a p {
-    margin-left: -12px;
+    margin-left: -4px;
 }
 
 
@@ -249,6 +297,11 @@ ul li:hover {
 
 
 /* css main */
+
+#main-container {
+    width: 100%;
+    height: 100%;
+}
 
 #main {
     background: #f9f9f9;
@@ -307,7 +360,8 @@ ul li:hover {
     font-weight: 400;
 }
 
-.blur {
+
+/* .blur {
     background-color: #000000;
     opacity: 0;
     height: 100%;
@@ -316,6 +370,19 @@ ul li:hover {
     z-index: 10001;
     right: -14.5px;
     display: none;
+} */
+
+.loader {
+    display: flex;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.loader img {
+    margin: auto;
+    margin-top: -45px;
+    height: 132px;
+    width: 200px;
 }
 
 
@@ -371,6 +438,24 @@ ul li:hover {
 @media only screen and (max-width: 992px) {
     .search input {
         width: 180px;
+    }
+}
+
+
+/* ẩn small sidebar và căn nội dung ra giữa */
+
+@media only screen and (max-width: 808px) {
+    #small-sidebar {
+        display: none;
+    }
+    #main-container {
+        display: flex;
+        /* background: #f9f9f9; */
+        /* align-items: center; */
+    }
+    #main {
+        width: 100%;
+        margin: auto;
     }
 }
 

@@ -13,16 +13,26 @@ function showLargeMenu() {
 }
 
 function blur() {
-    $(".blur").show();
-    $(".blur").animate({ "opacity": "0.5" });
+    // $("#main").show();
+    $("#main").animate({ "opacity": "0.5" });
     $("body").css("overflow", "hidden"); //không cho scroll trên trình duyệt
 }
 
 function visible() {
-    $(".blur").hide();
-    $(".blur").animate({ "opacity": "0" });
+    // $("#main").hide();
+    $("#main").animate({ "opacity": "1" });
     $("body").css("overflow", "auto");
 }
+
+//Hàm xử lý khi click vào khoảng trống thì ẩn Menu đi
+$(document).ready(function() {
+    $("#main").click(function() {
+        if ($("body").css("overflow") == "hidden") {
+            $("#large-sidebar").animate({ "marginLeft": "-260px" }, 200); //hide
+            visible();
+        }
+    })
+})
 
 // Xử lý nút Toggle
 $(document).ready(function() {
@@ -46,14 +56,14 @@ $(document).ready(function() {
             var x = $("#large-sidebar").css("margin-left");
             console.log(x);
             if (x == "0px") {
-                $("#large-sidebar").animate({ "marginLeft": "-260px" }, 200); //show
+                $("#large-sidebar").animate({ "marginLeft": "-260px" }, 200); //hide
 
                 visible();
             }
             if (x == "-260px") {
                 bl = true;
                 $("#large-sidebar").show(); // phải show ra vì toggle lúc này đang ở trạng thái hide
-                $("#large-sidebar").animate({ "marginLeft": "0px" }, 200); //hide
+                $("#large-sidebar").animate({ "marginLeft": "0px" }, 200); //show
 
                 //Xử lý làm mờ
                 blur();
@@ -87,25 +97,17 @@ $(document).ready(function() {
     }
 });
 
-// var giffImgs = ["./images/giffvideo1.webp", "./images/giffvideo2.webp", "./images/giffvideo3.webp", "./images/giffvideo4.webp",
-//     "./images/giffvideo5.webp", "./images/giffvideo6.webp", "./images/giffvideo7.webp", "./images/giffvideo8.webp",
-//     "./images/giffvideo9.webp", "./images/giffvideo10.webp", "./images/giffvideo11.webp", "./images/giffvideo12.webp"
-// ];
-// var imgs = ["./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png",
-//     "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png", "./images/video1.png",
-//     "./images/video1.png", "./images/video1.png"
-// ];
-
+//Hàm xử lý khi hover vào ảnh video
 $(document).ready(function() {
     var myElements = $('.card-img-top');
     $('.card-img-top').each(function(index) {
         $(this).hover(function() {
-            var giffImg = "./images/giffvideo"+(index+1)+".webp";
-            $(this).attr("src",giffImg);               
-            
-        }, function(){
-            var img = "./images/video"+(index+1)+".png";
-            $(this).attr("src",img);
+            var giffImg = "./images/giffvideo" + (index + 1) + ".webp";
+            $(this).attr("src", giffImg);
+
+        }, function() {
+            var img = "./images/video" + (index + 1) + ".png";
+            $(this).attr("src", img);
         });
     });
 });
